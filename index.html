@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Membedakan buah buah an dengan sayuran</title>
+ 
+<script>
+function tampilkan(){
+ 
+  var nama_makanan=document.getElementById("form1").select1.value;
+  var p_kontainer=document.getElementById("container");
+ 
+  if (nama_makanan=="pisang")
+    {
+        p_kontainer.innerHTML="pisang merupakan buah buah an";
+    }
+  else if (nama_makanan=="anggur")
+    {
+        p_kontainer.innerHTML="anggur merupakan buah buah an";
+    }
+  else if (nama_makanan=="lobak")
+    {
+        p_kontainer.innerHTML="lobak merupakan sayuran";
+    }
+}
+</script>
+</head>
+<body>
+<h2>Ujian Apk Yoga Nanda Saputra</h2>
+ 
+<form id="form1" name="form1" onsubmit="return false">
+  <label for="select1">Pilih Makanan: </label>
+  <select id="select1" name="select1">
+    <option value="pisang">pisang</option>
+    <option value="anggur">anggur</option>
+    <option value="lobak">lobak</option>
+  </select>
+  <input type="submit" value="Tampilkan Keterangan" onclick="tampilkan()">
+</form>
+ 
+<p id="container"></p>
+ 
+</body>
+</html>
